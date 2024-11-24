@@ -1,138 +1,20 @@
 from models.endereco import Endereco
-from models.enums.estado_civil import EstadoCivil
+#from models.enums.bonificacao import Bonificacao
 from models.enums.setor import Setor
 from models.enums.sexo import Sexo
 from models.enums.unidade_federal import UnidadeFederativa
-from models.abstracts.juridica import Juridico
-from models.prestacao_servico import PrestacaoServico
-from models.fornecedor import Fornecedor
-from models.abstracts.fisica import Fisica
-from models.cliente import Cliente
+#from models.abstracts.cargo_confianca import CargoDeConfianca
 from models.abstracts.funcionario import Funcionario
-from models.engenheiro import Engenheiro
-from models.medico import Medico
-from models.juridico import Juiz
+#from models.advogado import Advogado
+#from models.diretor import Diretor
+#from models.gerente import Gerente
+from models.motorista import Motorista
 import os
 
-os.system("cls")
+os.system("clear")
 
-endereco1 = Endereco(
-    "X XXXX XXXX", "XXX", "X XXXXX", "XXXXX-XXX", "XXXXXXXX", UnidadeFederativa.BAHIA
-)
-juridico1 = Juridico(
-    "XXXXX", "XXXXX", 1, "XXXXXXXX", 18, "XX XXXXX XXXX", "XXXXX@XXXXX.XXX", endereco1
-)
-prestacao1 = PrestacaoServico(
-    "01/01/2024",
-    "31/12/2024",
-    "XXXXX",
-    "XXXXX",
-    1,
-    "XXXXXXXX",
-    18,
-    "XX XXXXX XXXX",
-    "XXXXX@XXXXX.XXX",
-    endereco1,
-)
-fornecedor1 = Fornecedor(
-    "XXXXXX",
-    "XXXXX",
-    "XXXXX",
-    1,
-    "XXXXXXXX",
-    18,
-    "XX XXXXX XXXX",
-    "XXXXX@XXXXX.XXX",
-    endereco1,
-)
-fisica1 = Fisica(
-    Sexo.MASCULINO,
-    "21/08/2005",
-    EstadoCivil.SOLTEIRO,
-    1,
-    "XXXXXXXX",
-    18,
-    "XX XXXXX XXXX",
-    "XXXXX@XXXXX.XXX",
-    endereco1,
-)
-cliente1 = Cliente(
-    15,
-    Sexo.MASCULINO,
-    "21/08/2005",
-    EstadoCivil.SOLTEIRO,
-    1,
-    "XXXXXXXX",
-    18,
-    "XX XXXXX XXXX",
-    "XXXXX@XXXXX.XXX",
-    endereco1,
-)
-funcionario1 = Funcionario(
-    "XXX.XXX.XXX-XX",
-    "XX.XXX.XXX.XXX",
-    "XXXXXX",
-    Setor.ENGENHARIA,
-    3.500,
-    Sexo.MASCULINO,
-    "21/08/2005",
-    EstadoCivil.SOLTEIRO,
-    1,
-    "XXXXXXXX",
-    18,
-    "XX XXXXX XXXX",
-    "XXXXX@XXXXX.XXX",
-    endereco1,
-)
-engenheiro1 = Engenheiro(
-    "XXXXX",
-    "XXX.XXX.XXX-XX",
-    "XX.XXX.XXX.XXX",
-    "XXXXXX",
-    Setor.ENGENHARIA,
-    3.500,
-    Sexo.MASCULINO,
-    "21/08/2005",
-    EstadoCivil.SOLTEIRO,
-    1,
-    "XXXXXXXX",
-    18,
-    "XX XXXXX XXXX",
-    "XXXXX@XXXXX.XXX",
-    endereco1,
-)
-medico1 = Medico(
-    "XXXXX",
-    "XXX.XXX.XXX-XX",
-    "XX.XXX.XXX.XXX",
-    "XXXXXX",
-    Setor.ENGENHARIA,
-    3.500,
-    Sexo.MASCULINO,
-    "21/08/2005",
-    EstadoCivil.SOLTEIRO,
-    1,
-    "XXXXXXXX",
-    18,
-    "XX XXXXX XXXX",
-    "XXXXX@XXXXX.XXX",
-    endereco1,
-)
-juiz1 = Juiz(
-    "XXXXX",
-    "XXX.XXX.XXX-XX",
-    "XX.XXX.XXX.XXX",
-    "XXXXXX",
-    Setor.ENGENHARIA,
-    3.500,
-    Sexo.MASCULINO,
-    "21/08/2005",
-    EstadoCivil.SOLTEIRO,
-    1,
-    "XXXXXXXX",
-    18,
-    "XX XXXXX XXXX",
-    "XXXXX@XXXXX.XXX",
-    endereco1,
-)
-print(engenheiro1)
+endereco_universal = Endereco("R Rua Python", "218", "Último andar", "40400-000", "Salvador", UnidadeFederativa.BAHIA)
+motorista = Motorista("XXX.XXX.XXX.XX", "Carlos", "XXX.XXX.XXX-XX", "XX.XXX.XXX-XXX", endereco_universal, Sexo.MASCULINO, Setor.SAUDE, 3500, "XX/XX/XXXX")
+
+print("Sistema 2.0")
+print(motorista)

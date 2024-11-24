@@ -14,9 +14,9 @@ class Funcionario(ABC):
         self.salario = salario
         self.data_nascimento = data_nascimento
 
-        @abstractmethod
-        def salario_final(self):
-            pass
+    @abstractmethod
+    def salario_final(self):
+         pass
 
     def __str__(self) -> str:
         return (
@@ -26,7 +26,7 @@ class Funcionario(ABC):
             f"\nEndereço: {self.endereco}"
             f"\nSexo: {self.sexo.nome} - {self.sexo.sigla}"
             f"\nSetor: {self.setor.value}"
-            f"\nSalário: {self.salario:.3f}"
+            f"\nSalário: {self.salario:.2f}"
             f"\nData de nascimento: {self.data_nascimento}"
         )
 
